@@ -1,0 +1,24 @@
+header{
+    color: aliceblue;
+    background-color: rgb(92, 178, 235);
+}
+.highlight{
+    color: rgb(84, 152, 240);
+}
+ul{
+    list-style: none;
+}
+.warring{
+    color: red;
+    font-style: italic;
+}
+footer{
+    color: aliceblue;
+    background-color: rgb(92, 178, 235);
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+h2{
+     color: rgb(58, 127, 218);
+}
