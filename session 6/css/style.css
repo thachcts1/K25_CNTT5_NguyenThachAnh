@@ -1,0 +1,20 @@
+body{
+   background-color: #fff7ed;
+   font-family: cursive
+
+}
+header{
+    color: #92400e;
+}
+.bar{
+    background-color: #fed7aa;
+    font-weight: bold;
+}
+footer{
+    text-align: center;
+    background-color:#78350f;
+    color: white;
+}
+.tt{
+    
+}
