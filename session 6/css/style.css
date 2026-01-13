@@ -15,6 +15,28 @@ footer{
     background-color:#78350f;
     color: white;
 }
-.tt{
-    
+.dashbar{
+    text-align: center; 
+    background: #f6c89b;
+    padding: 6px;
+}
+
+.dashbar a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 3px;
+}
+.list1 :hover{
+    background: #78350f;   
+    color: yellow;      
+    font-weight: bold;
+    cursor: pointer;
+}
+.bar :hover{
+    background-color: #f6c89b;
+    background: rgb(167, 93, 93);
+    font-weight: bold;
 }
