@@ -1,41 +1,77 @@
-header{
-    background-color: #0ea5e9;
-    color: white;
-    text-align: center;
-}
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f1f5f9;
     color: #1f2937;
-    position: relative;
 }
+
+.header {
+    background-color: #1da6e6;
+    color: white;
+    text-align: center;
+    padding: 24px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.header p {
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+
 .dashbar {
     background-color: #e0f2fe;
     text-align: center;
-    padding: 11px;
-    margin: 17px;
+    padding: 10px;
+    margin: 16px;
     border-radius: 12px;
 }
 
 .dashbar a {
-    margin: 0 13px;
+    margin: 0 12px;
     text-decoration: none;
     color: #0369a1;
     font-weight: bold;
-    text-align: center;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: 0.2s;
 }
 
 .dashbar a:hover {
     color: white;
     background-color: #0284c7;
-    padding: 6px 10px;
-    border-radius: 8px;
-    text-align: center;
 }
 
-.footer{
+.content {
+    padding: 20px;
+}
+
+
+.section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 50px;
+    border-radius: 16px;
+}
+
+.section h2 {
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+
+.highlight {
+    background-color: #ecfeff;
+    border-left: 6px solid #1da6e6;
+}
+
+
+.footer {
+    background-color: #0f172a;
+    color: #e5e7eb;
     text-align: center;
-    background-color: #0F172A;
-    color: white;   
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
