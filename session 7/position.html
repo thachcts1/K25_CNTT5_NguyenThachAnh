@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .relaytive {
+            width: 100px;
+            height: 100px;
+            background-color: lime;
+            color: white;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: cyan;
+            color: white;
+            position: relative;
+            left: 150px;
+            bottom: 100px;
+        }
+    </Style>
+</head>
+
+<body>
+
+    <!-- 
+        Position: Định vị, vị trí của 1 phần tử
+        1. Static: 
+        2. Relayvite: sẽ lấy vị trí ban đầu của nó làm mốc
+        3. Absolute: Tìm phần tử chứa nó gần nhất có thuốc tính position giá trị Khác Static làm Mốc,
+        nếu không có thì ăn theo kích thước màn hình.
+        4. Fixed: cố định  thanh header
+        5. Sticky: 
+    -->
+    <div class="relaytive"> relaytive</div>
+    <div class="box">box</div>
+</body>
+
+</html>

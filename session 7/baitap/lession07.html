@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .form-card {
+            width: 320px;
+            border: 1px solid #000;
+            padding: 16px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0a8a7a;
+            margin-bottom: 16px;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 95%;
+            padding: 8px;
+            margin: 6px 0 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #12a6a0;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-card">
+        <h2>Biểu Mẫu Feedback Phòng<br>Khám Nha Khoa</h2>
+
+        <label>Họ và tên</label>
+        <input type="text" placeholder="Nhập họ tên">
+
+        <label>Email</label>
+        <input type="email" placeholder="example@gmail.com">
+
+        <label>Dịch vụ đã sử dụng</label>
+        <select>
+            <option>Khám tổng quát</option>
+            <option>Tẩy trắng răng</option>
+            <option>Niềng răng</option>
+        </select>
+
+        <label>Mức độ hài lòng</label>
+        <select>
+            <option>Rất hài lòng</option>
+            <option>Hài lòng</option>
+            <option>Bình thường</option>
+            <option>Không hài lòng</option>
+        </select>
+
+        <label>Nội dung phản hồi</label>
+        <textarea rows="4" placeholder="Hãy cho chúng tôi biết cảm nhận của bạn..."></textarea>
+
+        <button>Gửi feedback</button>
+    </div>
+</body>
+
+</html>

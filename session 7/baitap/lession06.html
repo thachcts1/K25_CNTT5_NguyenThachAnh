@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .treatment-card {
+            width: 420px;
+            background: #fff;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .status {
+            background: #ffe0b2;
+            color: #ff8c00;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .progress-title {
+            margin: 12px 0 6px;
+            font-weight: bold;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #eee;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .progress {
+            width: 70%;
+            height: 100%;
+            background: #2cff00;
+        }
+
+        .date {
+            margin-top: 10px;
+            font-size: 13px;
+            color: #555;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="treatment-card">
+        <div class="header">
+            <h3>Niềng răng chỉnh nha</h3>
+            <span class="status">ĐANG ĐIỀU TRỊ</span>
+        </div>
+
+        <p>Bác sĩ 👩‍⚕️<i class="fa-solid fa-user-doctor"></i>: <b>BS. Nguyễn Minh Tâm</b></p>
+        <p>Chi phí 💵<i class="fa-solid fa-sack-dollar"></i>: <b>25.000.000 đ</b></p>
+
+        <p class="progress-title">Tiến trình điều trị</p>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+
+        <div class="date">
+            <span>Bắt đầu: 10/03/2025</span>
+            <span>Dự kiến hoàn thành: 10/03/2026</span>
+        </div>
+    </div>
+</body>
+
+</html>

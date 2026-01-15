@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: cursive;
+            background-color: #f2f5f7;
+            display: flex;
+            justify-content: center;
+        }
+
+        .card {
+            width: 320px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-header {
+            background: #2ff5e3;
+            text-align: center;
+            padding: 16px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .hot {
+            position: absolute;
+            top: 5px;
+            right: 3px;
+            background: red;
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+
+        .card-body {
+            padding: 16px;
+        }
+
+        .card-body p {
+            border-bottom: 1px solid #eee;
+            padding: 8px 0;
+        }
+
+        .card-body span {
+            color: #00c800;
+            font-weight: bold;
+        }
+
+        .price span {
+            font-size: 18px;
+        }
+
+        button {
+            width: 80%;
+            margin: 16px auto 20px;
+            display: block;
+            padding: 12px;
+            border: none;
+            border-radius: 30px;
+            background: #00d5ff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <span class="hot">HOT</span>
+        <div class="card-header">GÓI CHĂM SÓC RĂNG</div>
+
+        <div class="card-body">
+            <p>Dịch vụ: <span>Tẩy trắng răng</span></p>
+            <p>Công nghệ: <span>Laser Whitening</span></p>
+            <p>Thời gian: <span>60 phút</span></p>
+            <p>Bảo hành: <span>6 tháng</span></p>
+            <p class="price">Giá ưu đãi: <span>1.600.000 đ</span></p>
+        </div>
+        <button>ĐẶT LỊCH NGAY</button>
+</body>
+
+</html>
