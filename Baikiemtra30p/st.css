@@ -1,0 +1,41 @@
+header{
+    background-color: #0ea5e9;
+    color: white;
+    text-align: center;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1f2937;
+    position: relative;
+}
+.dashbar {
+    background-color: #e0f2fe;
+    text-align: center;
+    padding: 11px;
+    margin: 17px;
+    border-radius: 12px;
+}
+
+.dashbar a {
+    margin: 0 13px;
+    text-decoration: none;
+    color: #0369a1;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dashbar a:hover {
+    color: white;
+    background-color: #0284c7;
+    padding: 6px 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.footer{
+    text-align: center;
+    background-color: #0F172A;
+    color: white;   
+}
