@@ -1,0 +1,33 @@
+.main{
+
+    display: flex;
+    background-color: tomato;
+    height: 400px;
+    /* justify-content: space-evenly; */
+    flex-direction: row;
+    /* align-items: flex-end; */
+    flex-wrap: wrap;
+    gap: 15px;
+    align-content: flex-end;
+}
+.main .item{
+    width: 200px;
+    height: 50px;
+    background-color: darkgreen;
+    border: 2px solid yellow;
+}
+.item1{
+    flex-grow: 1.5;
+}
+.item2{
+    flex-grow: 1.5;
+}
+.item3{
+    flex-grow: 1;
+}
+.item4{
+    flex-grow: 1;
+}
+.item5{
+    flex-grow: 1;
+}

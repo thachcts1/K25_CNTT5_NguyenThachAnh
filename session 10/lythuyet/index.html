@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./st.css">
+</head>
+<body>
+    <!-- 
+        Flex box: giúp căn chỉnh vị trí các phần tử, dàn layout theo chiều ngang và theo chiều dọc:
+        trước đó nếu không có flex box (float, margin)
+
+        1. Hai khai niệm quan trọng trong flex box
+            + flex-container : phần tử cha
+            + flex-item : phần tử con
+        2. Muốn 1 khối trở thành flex box thì pải có giấ trị thuộc tính
+            display: flex (none, inline, block, inline-block)
+        3. Trục trong flex
+            chia làm 2 trục
+            +Trục chính _ MAIN AXIS
+            +Trục phụ _ CROSS AXIS
+            ==> 2 Trục này luôn vuông góc với nhau
+        4. Flex-direction
+            Giá trị mặc định của nó là: row
+            flex-direction: row : MAIN-AXIS nằm ngang ==> CROSS-AXIS nằm đọc
+                          : colum: MAIN-AXIS nằm dọc ==> CROSS-AXIS nằm ngang
+        5. justity_content: CHỈ CẦN CHỈNH THEO MAIN-AXIS
+            5.1. flex-start: Giá trị mặc định
+            5.2. center: đưa các phần tử ra giữa
+            5.3. space-evenly: cách đều các flex item
+            5.4. space-betweem: đưa các phần tử bắt đầu từ mép và khoảng cách đều nhau
+            5.5. space-around:
+        6. align-item: CHỈ CẦN CHỈNH THEO TRỤC PHỤ CROSS AXIS
+            flex start
+            center
+            flex-end
+        7. flex-wrap: giá tri mặc định là nowrap : ko cho phép phần tử xuống dòng
+           flex-wrap: wrap: cho phép xuống dòng khi phần tử khahcs chiếm diện tích
+        8. gap: khoảng cách giữa các flex-item
+        9. order: thứ tự hiển thị của các flex-item
+           order: giá trị mặc định là 0.
+                (Phần tử nào có giá trị order nhỏ hơn thì ưu tiên hiển thị trước, nhận cả giá trị âm)
+        10. align-content: Căn chỉnh khoảng cách giữa các trục dọc
+
+
+    -->     
+
+        <div class="main">
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+            <div class="item item5">5</div>
+        </div>
+</body>
+</html>

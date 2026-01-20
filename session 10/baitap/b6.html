@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#111;
+}
+
+/* HEADER */
+.header{
+    background:#222;
+    color:#f1c40f;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+}
+
+.header nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:25px;
+}
+
+/* HERO */
+.hero{
+    width:100%;
+    height:420px;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* FEATURED */
+.featured{
+    background:#fff;
+    padding:50px 0;
+    text-align:center;
+}
+
+.featured h2{
+    font-size:28px;
+}
+
+.line{
+    width:80px;
+    height:3px;
+    background:#f1c40f;
+    margin:10px auto 30px;
+}
+
+.food-list{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.food-list img{
+    width:200px;
+    height:150px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+/* ABOUT */
+.about{
+    background:#111;
+    color:#fff;
+    text-align:center;
+    padding:50px 80px;
+}
+
+.about h2{
+    color:#f1c40f;
+    margin-bottom:15px;
+}
+
+.about p{
+    font-size:13px;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+.about span{
+    font-size:12px;
+    color:#aaa;
+}
+
+/* FOOTER */
+.footer{
+    background:#000;
+    color:#fff;
+    padding:40px 50px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+}
+
+.footer-col{
+    width:30%;
+}
+
+.footer-col h3{
+    color:#f1c40f;
+    margin-bottom:10px;
+}
+
+.footer-col p{
+    font-size:13px;
+    line-height:1.6;
+}
+
+.footer-bottom{
+    text-align:center;
+    font-size:12px;
+    color:#aaa;
+    margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">Gourmet</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <img src="/session 10/img/anhbia.png">
+</section>
+
+<section class="featured">
+    <h2>Món Ăn Nổi Bật</h2>
+    <div class="line"></div>
+    <div class="food-list">
+        <img src="/session 10/img/Overlay+Shadow.png">
+        <img src="/session 10/img/Overlay+Shadow (1).png">
+        <img src="/session 10/img/Overlay+Shadow (2).png">
+        <img src="/session 10/img/Overlay+Shadow (4).png">
+    </div>
+</section>
+
+<section class="about">
+    <h2>Về Chúng Tôi</h2>
+    <p>
+        Nhà hàng Gourmet là nơi hội tụ của nghệ thuật ẩm thực và sự tinh tế.
+        Với đội ngũ đầu bếp giàu kinh nghiệm và niềm đam mê bất tận, chúng tôi
+        mang đến những món ăn không chỉ ngon miệng mà còn là một trải nghiệm
+        thị giác và cảm xúc đáng nhớ.
+    </p>
+    <span>© 2025 Nhà hàng Gourmet. Tất cả quyền được bảo lưu.</span>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3>Giới Thiệu</h3>
+            <p>Gourmet là nhà hàng ẩm thực cao cấp mang phong cách sang trọng và tinh tế.</p>
+        </div>
+        <div class="footer-col">
+            <h3>Giờ Mở Cửa</h3>
+            <p>Thứ 2 - Chủ nhật<br>08:00 - 22:00</p>
+        </div>
+        <div class="footer-col">
+            <h3>Liên Hệ</h3>
+            <p>📍 Hà Nội<br>📞 0123 456 789<br>✉ gourmet@gmail.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2025 Nhà hàng Gourmet. Tất cả quyền được bảo lưu.
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #faf6ef;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: #1e1e1e;
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            font-size: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        /* Main */
+        .main {
+            width: 100%;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .main h1 {
+            margin-bottom: 30px;
+        }
+
+        /* Bài viết nổi bật */
+        .featured {
+            width: 400px;
+            margin: 0 auto 50px;
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .featured img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .featured h3 {
+            margin: 15px 0 8px;
+        }
+
+        .featured p {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .featured a {
+            font-size: 13px;
+            color: #d49c00;
+            text-decoration: none;
+        }
+
+        /* Các bài viết khác */
+        .others {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        .others h2 {
+            margin-bottom: 20px;
+        }
+
+        .post {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .post h4 {
+            margin-bottom: 5px;
+        }
+
+        .post p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e1e1e;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>Gourmet Insights</h2>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Posts</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <h1>Bài Viết Nổi Bật</h1>
+
+        <div class="featured">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947" alt="">
+            <h3>Nghệ Thuật Plating Trong Fine Dining</h3>
+            <p>Khám phá cách các đầu bếp hàng đầu biến món ăn thành tác phẩm nghệ thuật.</p>
+            <a href="#">Đọc thêm →</a>
+        </div>
+
+        <div class="others">
+            <h2>Các Bài Viết Khác</h2>
+
+            <div class="post">
+                <h4>Bí Quyết Chọn Nguyên Liệu Cao Cấp</h4>
+                <p>Tìm hiểu cách lựa chọn nguyên liệu tốt nhất cho món ăn hoàn hảo.</p>
+            </div>
+
+            <div class="post">
+                <h4>Xu Hướng Ẩm Thực 2025</h4>
+                <p>Những phong cách ẩm thực mới đang làm mưa làm gió trong giới Fine Dining.</p>
+            </div>
+
+            <div class="post">
+                <h4>Hành Trình Của Một Đầu Bếp Michelin</h4>
+                <p>Câu chuyện đầy cảm hứng về con đường chinh phục sao Michelin.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Gourmet Insights. All rights reserved.
+    </footer>
+
+</body>
+
+</html>
