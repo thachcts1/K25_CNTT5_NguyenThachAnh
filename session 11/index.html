@@ -3,14 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BunChaNgon</title>
+
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header>
-        <h1></h1>
+    <header class="header">
+        <div class="logo">
+            <h1>🍲 Bún Chả Hà Nội</h1>
+        </div>
+        <nav>
+            <a href="#home">Trang chủ</a>
+            <a href="#menu">Menu</a>
+            <a href="#booking">Đặt bàn</a>
+            <a href="#contact">Liên hệ</a>
+        </nav>
+        <a class="booking" href="#booking">Đặt bàn ngay</a>
     </header>
-    <main></main>
-    <footer></footer>
+
+    <main>
+        <section class="hero" id="home">
+            <img src="./1.png" alt="banner">
+            <div class="hero-text">
+                <h1>Hương Vị Hà Nội Xưa</h1>
+                <p>Bún chả nướng than hoa, nước chấm gia truyền, rau sống tươi sạch mỗi ngày. Không gian ấm cúng như ở nhà.</p>
+                <a href="#booking" class="booking" id="booking">Đặt bàn hôm nay</a>
+            </div>
+        </section>
+
+        <section class="dish">
+            <h2 class="title">Món Nổi Bật</h2>
+            <div class="dish-container">
+                <div class="dish-item">
+                    <img src="./Bún chả.png" alt="Bún Chả Đặc Biệt">
+                    <div class="dish-text">
+                        <h3>Bún Chả Đặc Biệt</h3>
+                        <p class="price">95.000đ</p>
+                        <p class="dish-detail">Chả nướng than hoa thơm lừng, thịt tươi mềm, nước chấm cân bằng chua ngọt.</p>
+                    </div>
+                </div>
+                <div class="dish-item">
+                    <img src="./Nem cuốn.png" alt="Nem Hà Nội">
+                    <div class="dish-text">
+                        <h3>Nem Hà Nội</h3>
+                        <p class="price">60.000đ / 4 cái</p>
+                        <p class="dish-detail">Nem rán giòn tan, nhân thịt + mộc nhĩ + bún tàu, chấm nước mắm pha.</p>
+                    </div>
+                </div>
+                <div class="dish-item">
+                    <img src="./Phở bò.png" alt="Phở Bò Tái">
+                    <div class="dish-text">
+                        <h3>Phở Bò Tái</h3>
+                        <p class="price">85.000đ</p>
+                        <p class="dish-detail">Nước dùng ninh 12 tiếng, thịt bò tươitái lăn, bánh phở dai mềm.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu" id="menu">
+            <h2 class="title">Thực Đơn</h2>
+            <div class="menu-container">
+                <div class="menu-item">
+                    <h4>Bún chả thường</h4>
+                    <p class="price">75.000đ</p>
+                </div>
+                <div class="menu-item">
+                    <h4>Bún chả đặc biệt</h4>
+                    <p class="price">95.000đ</p>
+                </div>
+                <div class="menu-item">
+                    <h4>Phở bò tái nạm</h4>
+                    <p class="price">85.000đ</p>
+                </div>
+                <div class="menu-item">
+                    <h4>Phở gà</h4>
+                    <p class="price">80.000đ</p>
+                </div>
+                <div class="menu-item">
+                    <h4>Nem Hà Nội (4 cái)</h4>
+                    <p class="price">60.000đ</p>
+                </div>
+                <div class="menu-item">
+                    <h4>Trà đá</h4>
+                    <p class="price">10.000đ</p>
+                </div>
+                <div class="menu-item">
+                    <h4>Coca / Pepsi</h4>
+                    <p class="price">20.000đ</p>
+                </div>
+                <div class="menu-item">
+                    <h4>Bia hơi Hà Nội</h4>
+                    <p class="price">25.000đ</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="contact" id="contact">
+            <div class="contact-item">
+                <h3>🍲 Bún Chả Hà Nội</h3>
+                <p>Hương vị truyền thống hơn 30 năm</p>
+                <p>Không gian ấm cúng - phục vụ tận tình</p>
+            </div>
+            <div class="contact-item">
+                <h3>Giờ mở cửa</h3>
+                <p>Thứ 2 - Thứ 7: 10:00 - 21:00</p>
+                <p>Chủ nhật: 10:00 - 20:00</p>
+            </div>
+            <div class="contact-item">
+                <h3>Liên hệ</h3>
+                <p>📍 12 Hàng Mành, Hoàn Kiếm, Hà Nội</p>
+                <p>☎️ 024 3825 1234</p>
+                <p>📱 0988 888 888</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <hr>
+            <p>© 2025 Bún Chả Hà Nội - Mini Project</p>
+        </div>
+    </footer>
 </body>
 </html>

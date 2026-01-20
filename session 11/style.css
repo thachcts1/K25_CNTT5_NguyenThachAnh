@@ -1,0 +1,248 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:"playfair display", serif;
+    background-color: #FFF8F0;
+}
+
+.header {
+    background-color: #FFFFFFF2;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position:sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header h1 {
+    font-size: 35.2px;
+    font-weight: 400;
+    color: #E76F51;
+    font-family: 'Playfair Display', serif;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: #3C2F2F;
+    font-size: 17.6px;
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+.booking {
+    background-color: #E76F51;
+    padding: 14px 30px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.booking:hover {
+    background-color: #eb4f29;
+    transform: translateY(-3px);
+    transform: scale(1.1);
+}
+
+.hero {
+    width: 100%;
+    height: 960px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.hero .hero-text {
+    width: 621.8900146484375px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.hero-text p {
+    font-size: 22.4px;
+    font-weight: 400;
+    margin: 30px 13.53px;
+    line-height: 35.84px;
+}
+
+.hero-text .booking {
+    font-size: 20.8px;
+    font-weight: 600;
+    padding: 18px 40px;
+}
+
+.dish {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin: 10px 0 40px;
+    color: #E76F51;
+}
+
+.dish-container {
+    margin: 0 80px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.dish-item {
+    width: 320px;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    text-align: left;
+    box-shadow: 0 10px 15px rgba(102, 102, 102, 0.186);
+    transition: transform 0.3s;
+}
+
+.dish-item:hover {
+    transform: translateY(-10px);
+}
+
+.dish-item img {
+    width: 100%;
+    height: 220px;
+    overflow: cover;
+}
+
+.dish-text {
+    padding: 20px;
+}
+
+.dish-text h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25.6px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.dish-text .dish-detail {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+    line-height: 25.6px;
+    margin: 20px 0;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: 600;
+    color: #E76F51;
+}
+
+.menu {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.menu-container {
+    margin: 50px auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.menu-item {
+    width: 280px;
+    height: 68.13999938964844px;
+    border-radius: 15px;
+    padding: 0 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 10px 15px rgba(102, 102, 102, 0.186);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-item h4 {
+    font-size: 17.6px;
+    font-weight: 600;
+}
+
+.menu-item .price {
+    font-size: 16px;
+}
+
+.footer {
+    height: 354.2200012207031px;
+    background-color: #3C2F2F;
+    color: #EEEEEE;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.contact {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.contact-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #E76F51;
+    margin-bottom: 30px;
+}
+
+.contact-item p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-bottom hr {
+    border: none;
+    height: 2px;
+    background-color: #4a4848;
+    margin-bottom: 40px;
+}
+
+.footer-bottom p {
+    font-size: 14.4px;
+    font-weight: 400;
+}
