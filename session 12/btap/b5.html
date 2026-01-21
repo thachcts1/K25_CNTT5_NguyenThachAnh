@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fc;
+        }
+
+        /* SECTION */
+        .faq {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .faq-badge {
+            display: inline-block;
+            background: #eef0ff;
+            color: #5b6cff;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+
+        .faq h2 {
+            font-size: 32px;
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        .faq p {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 40px;
+        }
+
+        /* FAQ LIST */
+        .faq-list {
+            text-align: left;
+        }
+
+        /* ITEM */
+        .faq-item {
+            background: #fff;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        /* hide checkbox */
+        .faq-item input {
+            display: none;
+        }
+
+        /* QUESTION */
+        .faq-question {
+            padding: 14px 18px;
+            background: #f3f4ff;
+            color: #333;
+            font-size: 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question span {
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        /* ANSWER */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.3s;
+            padding: 0 18px;
+            background: #fff;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* ACTIVE */
+        .faq-item input:checked~.faq-question {
+            background: #5b6cff;
+            color: #fff;
+        }
+
+        .faq-item input:checked~.faq-question span {
+            transform: rotate(180deg);
+        }
+
+        .faq-item input:checked~.faq-answer {
+            max-height: 200px;
+            padding: 14px 18px;
+        }
+
+        /* RESPONSIVE */
+
+        /* Tablet */
+        @media (max-width:768px) {
+            .faq h2 {
+                font-size: 26px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width:480px) {
+            .faq h2 {
+                font-size: 22px;
+            }
+
+            .faq-question {
+                font-size: 14px;
+            }
+
+            .faq-answer {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="faq">
+        <div class="faq-badge">Câu hỏi thường gặp</div>
+        <h2>Bạn có thắc mắc?</h2>
+        <p>Chúng tôi sẵn sàng giải đáp mọi thắc mắc của bạn</p>
+
+        <div class="faq-list">
+
+            <div class="faq-item">
+                <input type="checkbox" id="q1" checked>
+                <label for="q1" class="faq-question">
+                    Tôi có thể học trên điện thoại không?
+                    <span>⌄</span>
+                </label>
+                <div class="faq-answer">
+                    Có, nền tảng của chúng tôi hoàn toàn tương thích với mọi thiết bị bao gồm điện thoại, tablet và máy
+                    tính.
+                    Bạn có thể học mọi lúc, mọi nơi.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <input type="checkbox" id="q2">
+                <label for="q2" class="faq-question">
+                    Chứng chỉ có được công nhận không?
+                    <span>⌄</span>
+                </label>
+                <div class="faq-answer">
+                    abc
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <input type="checkbox" id="q3">
+                <label for="q3" class="faq-question">
+                    Tôi có thể hoàn tiền nếu không hài lòng?
+                    <span>⌄</span>
+                </label>
+                <div class="faq-answer">
+                    abc
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <input type="checkbox" id="q4">
+                <label for="q4" class="faq-question">
+                    Làm thế nào để liên hệ với giảng viên?
+                    <span>⌄</span>
+                </label>
+                <div class="faq-answer">
+                    abc
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <input type="checkbox" id="q5">
+                <label for="q5" class="faq-question">
+                    Tôi có thể tải video về để xem offline không?
+                    <span>⌄</span>
+                </label>
+                <div class="faq-answer">
+                    abc
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f3f5fb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .course-card {
+            width: 320px;
+            background: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-image {
+            height: 170px;
+            background: linear-gradient(135deg, #6f7de3, #7d64d9);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-image i {
+            font-size: 40px;
+            color: #fff;
+        }
+
+        .card-image .hot {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(255, 255, 255, 0.25);
+            color: #fff;
+            padding: 4px 10px;
+            font-size: 12px;
+            border-radius: 6px;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .tag {
+            background: #eef0ff;
+            color: #5b6cff;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 12px;
+        }
+
+        .rating {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .rating i {
+            color: #f1c40f;
+            margin-right: 4px;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .desc {
+            font-size: 13px;
+            color: #777;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+        .info i {
+            color: #5b6cff;
+            margin-right: 5px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #5b6cff;
+        }
+
+        .btn {
+            background: #5b6cff;
+            color: #fff;
+            text-decoration: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+
+        @media (max-width:768px) {
+            .course-card {
+                width: 280px;
+            }
+        }
+
+        @media (max-width:480px) {
+            .course-card {
+                width: 90%;
+            }
+
+            .info,
+            .footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="course-card">
+
+        <div class="card-image">
+            <i class="fa-solid fa-code"></i>
+            <div class="hot">Bán chạy</div>
+        </div>
+
+        <div class="card-body">
+
+            <div class="top-row">
+                <div class="tag">Lập trình</div>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i> 4.9
+                </div>
+            </div>
+
+            <div class="title">
+                Lập trình Web Full Stack
+            </div>
+
+            <div class="desc">
+                Học lập trình web từ cơ bản đến nâng cao với các công nghệ hiện đại nhất
+            </div>
+
+            <div class="info">
+                <div>
+                    <i class="fa-solid fa-clock"></i> 40 giờ
+                </div>
+                <div>
+                    <i class="fa-solid fa-users"></i> 12K+ học viên
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="price">2.990.000đ</div>
+                <a href="#" class="btn">Xem chi tiết</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

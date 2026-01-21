@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f6fa;
+        }
+
+        /* HEADER */
+        .header {
+            background: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* LOGO */
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #4a5bff;
+        }
+
+        .logo span {
+            margin-right: 6px;
+        }
+
+        /* NAV */
+        .nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 15px;
+        }
+
+        .nav a:hover {
+            color: #4a5bff;
+        }
+
+        /* BUTTON */
+        .btn a {
+            text-decoration: none;
+            background: #4a5bff;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        /* ICON MENU MOBILE */
+        .menu-toggle {
+            display: none;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+
+        /* Tablet */
+        @media (max-width:900px) {
+            .nav {
+                gap: 15px;
+            }
+
+            .btn a {
+                padding: 6px 12px;
+                font-size: 13px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width:600px) {
+            .nav {
+                display: none;
+            }
+
+            .btn {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+
+            <div class="logo">
+                <span>📘</span>
+                EduLearn
+            </div>
+
+            <nav class="nav">
+                <a href="#">Trang chủ</a>
+                <a href="#">Tính năng</a>
+                <a href="#">Khóa học</a>
+                <a href="#">Đánh giá</a>
+                <a href="#">Bảng giá</a>
+                <a href="#">FAQ</a>
+            </nav>
+
+            <div class="btn">
+                <a href="#">Bắt đầu ngay</a>
+            </div>
+
+            <div class="menu-toggle">☰</div>
+
+        </div>
+    </header>
+
+</body>
+
+</html>

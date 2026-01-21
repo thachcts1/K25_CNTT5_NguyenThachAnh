@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fc;
+        }
+
+        /* SECTION */
+        .pricing {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .pricing .badge {
+            display: inline-block;
+            background: #eef0ff;
+            color: #5b6cff;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .pricing h2 {
+            font-size: 28px;
+            margin-bottom: 6px;
+        }
+
+        .pricing p {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+
+        /* CARD LIST */
+        .pricing-list {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* CARD */
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 26px;
+            font-weight: bold;
+            color: #5b6cff;
+        }
+
+        .price span {
+            font-size: 13px;
+            color: #888;
+            font-weight: normal;
+        }
+
+        .card ul {
+            list-style: none;
+            text-align: left;
+            margin: 20px 0;
+        }
+
+        .card ul li {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* BUTTON */
+        .card a {
+            text-decoration: none;
+            border: 1px solid #5b6cff;
+            color: #5b6cff;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /* ACTIVE CARD */
+        .card.active {
+            border: 2px solid #5b6cff;
+            transform: scale(1.03);
+        }
+
+        .card.active a {
+            background: #5b6cff;
+            color: #fff;
+        }
+
+        /* RESPONSIVE */
+
+        /* Tablet */
+        @media (max-width:900px) {
+            .pricing-list {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .card {
+                width: 45%;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width:500px) {
+            .card {
+                width: 100%;
+            }
+
+            .pricing h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="pricing">
+        <div class="badge">Bảng giá</div>
+        <h2>Chọn gói phù hợp với bạn</h2>
+        <p>Linh hoạt và phù hợp với mọi nhu cầu học tập</p>
+
+        <div class="pricing-list">
+
+            <!-- CƠ BẢN -->
+            <div class="card">
+                <h3>Cơ bản</h3>
+                <div class="price">499.000đ <span>/tháng</span></div>
+
+                <ul>
+                    <li>Truy cập 50+ khóa học</li>
+                    <li>Học trên mọi thiết bị</li>
+                    <li>Hỗ trợ cộng đồng</li>
+                    <li>Chứng chỉ</li>
+                    <li>Hỗ trợ 1-1</li>
+                </ul>
+
+                <a href="#">Chọn gói</a>
+            </div>
+
+            <!-- CHUYÊN NGHIỆP -->
+            <div class="card active">
+                <h3>Chuyên nghiệp</h3>
+                <div class="price">999.000đ <span>/tháng</span></div>
+
+                <ul>
+                    <li>Truy cập tất cả khóa học</li>
+                    <li>Học trên mọi thiết bị</li>
+                    <li>Hỗ trợ cộng đồng</li>
+                    <li>Chứng chỉ sau mỗi khóa học</li>
+                    <li>Hỗ trợ 1-1 với mentor</li>
+                </ul>
+
+                <a href="#">Chọn gói</a>
+            </div>
+
+            <!-- DOANH NGHIỆP -->
+            <div class="card">
+                <h3>Doanh nghiệp</h3>
+                <div class="price">Liên hệ</div>
+
+                <ul>
+                    <li>Tất cả tính năng Pro</li>
+                    <li>Quản lý nhóm học viên</li>
+                    <li>Báo cáo tiến độ chi tiết</li>
+                    <li>Khóa học tùy chỉnh</li>
+                    <li>Hỗ trợ chuyên dụng</li>
+                </ul>
+
+                <a href="#">Liên hệ</a>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
