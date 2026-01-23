@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Khóa học của tôi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 40px;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+
+        .nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 15px;
+        }
+
+        .nav a.active {
+            color: #3f51ff;
+            font-weight: 600;
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .user img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+        }
+
+        /* BANNER */
+        .banner {
+            background: linear-gradient(135deg, #5f63f2, #6b70ff);
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .banner h1 {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .banner p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* ========== RESPONSIVE MOBILE ========== */
+        @media (max-width: 768px) {
+
+            .header {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .user {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .banner h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <span><img src="rikkei.jfif" alt=""></span>
+        </div>
+
+        <nav class="nav">
+            <a href="#">Trang chủ</a>
+            <a href="#">Khóa học</a>
+            <a href="#" class="active">Khóa học của tôi</a>
+            <a href="#">Liên hệ</a>
+        </nav>
+
+        <div class="user">
+            <img src="https://i.pravatar.cc/40" alt="avatar">
+            <span>Nguyễn Văn A</span>
+        </div>
+    </header>
+
+    <section class="banner">
+        <h1>Khóa Học Của Tôi</h1>
+        <p>Tiếp tục hành trình học tập và phát triển kỹ năng của bạn</p>
+    </section>
+
+</body>
+
+</html>

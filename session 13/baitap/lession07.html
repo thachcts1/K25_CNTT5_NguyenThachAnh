@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thống kê học tập</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f6f7fb;
+        }
+
+        .stats {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 16px;
+            margin: 30px;
+        }
+
+        .stats h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+            color: #1f2937;
+        }
+
+        .stats-list {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .stat-card {
+            flex: 1;
+            background: #f9fafb;
+            border-radius: 14px;
+            padding: 28px 20px;
+            text-align: center;
+
+        }
+
+        .icon {
+            text-align: center;
+        }
+
+        .number {
+            display: block;
+            font-size: 28px;
+            font-weight: bold;
+            color: #6366f1;
+            margin-bottom: 6px;
+        }
+
+        .stat-card p {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        /* ===== Tablet ===== */
+        @media (max-width: 1024px) {
+            .stats-list {
+                flex-wrap: wrap;
+            }
+
+            .stat-card {
+                flex: 0 0 calc(50% - 10px);
+            }
+        }
+
+        /* ===== Mobile ===== */
+        @media (max-width: 600px) {
+            .stats {
+                margin: 15px;
+                padding: 25px 16px;
+            }
+
+            .stats-list {
+                flex-direction: column;
+            }
+
+            .stat-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="stats">
+        <h2>Thống Kê Học Tập</h2>
+
+        <div class="stats-list">
+            <div class="stat-card">
+                <p class="icon">📚</p>
+                <span class="number">4</span>
+                <p>Tổng khóa học</p>
+            </div>
+
+            <div class="stat-card">
+                <p class="icon">🎯</p>
+                <span class="number">2</span>
+                <p>Đang học</p>
+            </div>
+
+            <div class="stat-card">
+                <p class="icon">✔️</p>
+                <span class="number">1</span>
+                <p>Hoàn thành</p>
+            </div>
+
+            <div class="stat-card">
+                <p class="icon">⌚</p>
+                <span class="number">43</span>
+                <p>Giờ học</p>
+            </div>
+
+            <div class="stat-card">
+                <p class="icon">📃</p>
+                <span class="number">1</span>
+                <p>Chứng chỉ</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

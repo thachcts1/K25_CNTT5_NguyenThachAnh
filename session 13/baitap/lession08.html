@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách khóa học</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f6f7fb;
+        }
+
+        .course-section {
+            padding: 30px;
+        }
+
+
+        .course-list {
+            display: flex;
+            gap: 24px;
+        }
+
+        .course-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            flex: 1;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-img {
+            position: relative;
+        }
+
+        .course-img img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            padding: 4px 10px;
+            font-size: 12px;
+            color: #fff;
+            border-radius: 12px;
+        }
+
+        .studying {
+            background: #6366f1;
+        }
+
+        .done {
+            background: #22c55e;
+        }
+
+        .saved {
+            background: #f59e0b;
+        }
+
+        .course-content {
+            padding: 18px;
+        }
+
+        .category {
+            font-size: 13px;
+            color: #6366f1;
+        }
+
+        .course-content h3 {
+            font-size: 16px;
+            margin: 6px 0;
+        }
+
+        .teacher {
+            font-size: 13px;
+            color: #6b7280;
+            margin-bottom: 12px;
+        }
+
+        .progress-box {
+            margin-bottom: 14px;
+        }
+
+        .progress-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        .progress-bar {
+            height: 6px;
+            background: #e5e7eb;
+            border-radius: 6px;
+        }
+
+        .progress {
+            height: 100%;
+            background: #6366f1;
+        }
+
+        .progress.full {
+            width: 100%;
+            background: #22c55e;
+        }
+
+        .progress-box small {
+            font-size: 12px;
+            color: #6b7280;
+        }
+
+        .price {
+            margin-bottom: 14px;
+        }
+
+        .price strong {
+            color: #6366f1;
+            font-size: 16px;
+        }
+
+        .price del {
+            font-size: 13px;
+            color: #9ca3af;
+            margin-left: 6px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .primary {
+            background: #6366f1;
+            color: #fff;
+        }
+
+        .outline {
+            background: transparent;
+            border: 1px solid #6366f1;
+            color: #6366f1;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 1024px) {
+            .course-list {
+                flex-wrap: wrap;
+            }
+
+            .course-card {
+                flex: 0 0 calc(50% - 12px);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .course-list {
+                flex-direction: column;
+            }
+
+            .course-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="course-section">
+        <div class="course-list">
+
+            <div class="course-card">
+                <div class="course-img">
+                    <span class="badge studying">Đang học</span>
+                    <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e">
+                </div>
+
+                <div class="course-content">
+                    <span class="category">Thiết kế</span>
+                    <h3>UI/UX Design Chuyên Nghiệp</h3>
+                    <p class="teacher">Giảng viên: Trần Thị B</p>
+
+                    <div class="progress-box">
+                        <div class="progress-info">
+                            <span>Tiến độ học tập</span>
+                            <span>20%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width:20%"></div>
+                        </div>
+                        <small>7/35 bài học · 28 giờ còn lại</small>
+                    </div>
+
+                    <button class="btn primary">Tiếp tục học</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-img">
+                    <span class="badge done">Hoàn thành</span>
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+                </div>
+
+                <div class="course-content">
+                    <span class="category">Marketing</span>
+                    <h3>Digital Marketing Toàn Diện</h3>
+                    <p class="teacher">Giảng viên: Lê Văn C</p>
+
+                    <div class="progress-box">
+                        <div class="progress-info">
+                            <span>Hoàn thành</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress full"></div>
+                        </div>
+                        <small>30/30 bài học · 15/12/2025</small>
+                    </div>
+
+                    <button class="btn outline">Xem lại</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-img">
+                    <span class="badge saved">Đã lưu</span>
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+                </div>
+
+                <div class="course-content">
+                    <span class="category">AI & Data</span>
+                    <h3>Machine Learning Cơ Bản</h3>
+                    <p class="teacher">Giảng viên: Phạm Thị D</p>
+
+                    <div class="price">
+                        <strong>2.799.000đ</strong>
+                        <del>3.999.000đ</del>
+                    </div>
+
+                    <button class="btn primary">Đăng ký ngay</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

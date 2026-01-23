@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khóa học của tôi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f7f7f7;
+        }
+
+        .header {
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 40px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .nav {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 15px;
+        }
+
+        .nav a.active {
+            color: #4f46e5;
+            font-weight: 600;
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .user img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+        }
+
+        .banner {
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .banner h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .banner p {
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 12px;
+            padding: 20px 40px;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            padding: 10px 18px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background: #fff;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+
+
+        .tab.active {
+            background: #4f46e5;
+            color: white;
+            border-color: #4f46e5;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 1024px) {
+            .header {
+                padding: 14px 20px;
+            }
+
+            .tabs {
+                padding: 20px;
+            }
+        }
+        .nav {
+                 position: fixed;
+        
+        flex-direction: column;
+        display: none;
+        text-align: center;
+            }
+
+        @media (max-width: 768px) {
+            .nav {
+                 position: fixed;
+        
+        flex-direction: column;
+        display: none;
+        text-align: center;
+            }
+
+            .banner h1 {
+                font-size: 24px;
+            }
+
+            .tabs {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tab {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div><img src="rikkei.jfif" alt=""></div>
+
+        <nav class="nav">
+            <a href="#">Trang chủ</a>
+            <a href="#">Khóa học</a>
+            <a href="#" class="active">Khóa học của tôi</a>
+            <a href="#">Liên hệ</a>
+        </nav>
+
+        <div class="user">
+            <img src="https://i.pravatar.cc/40" alt="">
+            <span>Nguyễn Văn A</span>
+        </div>
+    </header>
+
+    <section class="banner">
+        <h1>Khóa Học Của Tôi</h1>
+        <p>Tiếp tục hành trình học tập và phát triển kỹ năng của bạn</p>
+    </section>
+
+    <section class="tabs">
+        <button class="tab active">Tất cả khóa học (4)</button>
+        <button class="tab">Đang học (2)</button>
+        <button class="tab">Hoàn thành (1)</button>
+        <button class="tab">Đã lưu (1)</button>
+    </section>
+
+</body>
+
+</html>
