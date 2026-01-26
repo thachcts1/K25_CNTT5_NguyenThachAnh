@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoonPlay</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+}
+
+/* HEADER */
+.header {
+  background: #222;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+}
+
+.menu a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.login {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+/* CONTAINER */
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+/* TOP */
+.top {
+  display: flex;
+  gap: 20px;
+}
+
+.form {
+  flex: 2;
+  background: #fff;
+  padding: 15px;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+}
+
+.form button {
+  padding: 8px 15px;
+}
+
+.suggest {
+  flex: 1;
+  background: #fff;
+  padding: 10px;
+}
+
+.suggest img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* PROMO */
+.promo img,
+.wide img {
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+/* SECTION */
+.section h3 {
+  margin-bottom: 10px;
+}
+
+.list {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: calc(20% - 12px);
+}
+
+.item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* SMALL LIST */
+.list.small .item {
+  width: calc(25% - 12px);
+}
+
+/* FOOTER */
+.footer {
+  background: #3f3f3f;
+  color: #ccc;
+  margin-top: 40px;
+}
+
+.footer-box {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 20px;
+  display: flex;
+  gap: 30px;
+}
+
+.col {
+  flex: 1;
+}
+
+.col h4 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.col a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+
+.social span {
+  display: inline-block;
+  background: #555;
+  color: #fff;
+  padding: 6px 10px;
+  margin-right: 6px;
+  border-radius: 50%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .item {
+    width: calc(33.33% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .top {
+    flex-direction: column;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .item,
+  .list.small .item {
+    width: calc(50% - 10px);
+  }
+
+  .footer-box {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .item,
+  .list.small .item {
+    width: 100%;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">MOONPLAY</div>
+  <nav class="menu">
+    <a href="#">Trang chủ</a>
+    <a href="#">Phim lẻ</a>
+    <a href="#">Phim bộ</a>
+    <a href="#">Hoạt hình</a>
+    <a href="#">Quốc gia</a>
+  </nav>
+  <button class="login">Đăng nhập</button>
+</header>
+
+<!-- MAIN -->
+<div class="container">
+
+  <!-- FORM + GỢI Ý -->
+  <div class="top">
+    <form class="form">
+      <h3>MoviePlay</h3>
+      <input type="text" placeholder="Tên phim">
+      <input type="text" placeholder="Thể loại">
+      <input type="text" placeholder="Quốc gia">
+      <input type="email" placeholder="Email">
+      <textarea placeholder="Nội dung"></textarea>
+      <button>Đăng ký</button>
+    </form>
+
+    <aside class="suggest">
+      <h4>Gợi ý phim</h4>
+      <img src="1988.png">
+      <img src="cô gái.png">
+      <img src="hollywood.png">
+    </aside>
+  </div>
+
+  <!-- BANNER KHUYẾN MÃI -->
+  <div class="promo">
+    <img src="Banner.png">
+  </div>
+
+  <!-- PHIM THUÊ ĐẶC SẮC -->
+  <section class="section">
+    <h3>Phim thuê đặc sắc</h3>
+    <div class="list">
+      <div class="item"><img src="phim1.png"></div>
+      <div class="item"><img src="phim2.png"></div>
+      <div class="item"><img src="phim3.png"></div>
+      <div class="item"><img src="phim4.png"></div>
+      <div class="item"><img src="phim5.png"></div>
+    </div>
+  </section>
+
+  <!-- BANNER NGANG -->
+  <div class="wide">
+    <img src="Banner1.png">
+  </div>
+
+  <!-- PHIM SẮP CHIẾU -->
+  <section class="section">
+    <h3>Phim sắp chiếu</h3>
+    <div class="list small">
+      <div class="item"><img src="phim6.png"></div>
+      <div class="item"><img src="phim7.png"></div>
+      <div class="item"><img src="phim8.png"></div>
+      <div class="item"><img src="phim9.png"></div>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-box">
+
+    <div class="col">
+      <h4>MOONPLAY</h4>
+      <p>
+        Moon Play là dịch vụ được cung cấp bởi Công ty Cổ phần Moon Play,
+        thành viên của Công ty Cổ phần Giải Trí và Giáo Dục Moon.
+      </p>
+    </div>
+
+    <div class="col">
+      <h4>Giới thiệu</h4>
+      <a href="#">Quy chế sử dụng dịch vụ</a>
+      <a href="#">Chính sách bảo mật</a>
+      <a href="#">Khuyến mãi</a>
+    </div>
+
+    <div class="col">
+      <h4>Hỗ trợ</h4>
+      <p>0843601796</p>
+      <p>Kết nối với chúng tôi</p>
+      <div class="social">
+        <span>FB</span>
+        <span>IG</span>
+        <span>YT</span>
+        <span>TT</span>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
