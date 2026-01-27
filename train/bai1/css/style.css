@@ -1,0 +1,72 @@
+
+
+body{
+    background-color: #F0F9FF;
+}
+.title{
+    text-align: center;
+    background-color: #CCFBF1;
+    color: #0F766E;
+}
+.menu{
+    text-align: center;
+    background-color: #E0F2FE;
+}
+.menu a{
+    text-decoration: none;
+    font-size: 18px;
+    margin: 5px;
+    color: #0284C7;
+}
+.menu a:hover{
+    background-color: #0284C7;
+    color: white;
+}
+.art{
+    text-align: center;
+}
+.introduce{
+    background-color: white;
+}
+.introduce h2{
+    color: #155E75;
+}
+.service{
+    background-color: white;
+}
+footer{
+    text-align: center;
+    background-color: #0F766E;
+    color: white;
+}
+/* P2 */
+.border{
+    width: 70%;
+    margin: 30px auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.boardtop{
+    background-color: #BAE6FD;
+}
+.boardtop th{
+    color: #0284C7;
+}
+.boardmd:hover{
+    background-color: cyan;
+}
+.form{
+    text-align: center;
+}
+
+.form .forcus:focus{
+    background-color: #ECFEFF;
+}
+button{
+    background-color: #17aa9e;
+    color: white;
+}
+button:hover{
+    background-color: #0F766E;
+}
