@@ -18,6 +18,10 @@
             FALSY : 0, "", false, NaN, undefined, null
     4. Toán tử 3 ngôi
         condition ? nếu đúng : sai
+    5. Toán tử tăng giảm
+        ++i : tiến tố : tăng trước.
+        i++ : hậu tố : tăng sau.
 
+        --i : 
         
 */
