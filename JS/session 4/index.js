@@ -16,15 +16,11 @@ while (loginAttempts < 3) {
         loginAttempts++;
 
         if (username !== "admin" && password !== "12345") {
-            alert("Sai tài khoản và mật khẩu");
+            alert(`Sai tài khoản và mật khẩu - còn ${3 - loginAttempts} lần`);
         } else if (username !== "admin") {
-            alert("Sai tài khoản");
+            alert(`Sai tài khoản - còn ${3 - loginAttempts} lần`);
         } else {
-            alert("Sai mật khẩu");
-        }
-
-        if (loginAttempts < 3) {
-            alert("Số lần đăng nhập còn lại: " + (3 - loginAttempts));
+            alert(`Sai mật khẩu - còn ${3 - loginAttempts} lần`);
         }
     }
 }
@@ -32,7 +28,7 @@ while (loginAttempts < 3) {
 if (!isAuthenticated) {
     alert("Tài khoản đã bị khóa!");
 } else {
-    //MENu
+
     let choice;
     do {
         choice = parseInt(prompt(
@@ -148,10 +144,7 @@ if (!isAuthenticated) {
                 console.log("Danh sách mã may mắn:", list);
                 console.log("tổng số mã:",count);
                 break;
-                
-                
-
-
+  
             // ===== CASE 5 =====
             case 5:
                 alert("Thoát chương trình");

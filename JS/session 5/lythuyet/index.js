@@ -28,4 +28,4 @@ students.push("Quang");
 students.splice(1,0,"Văn");
 console.log("students",students);
 
-for(let i =0; i < )
+for(let i =0; i < );

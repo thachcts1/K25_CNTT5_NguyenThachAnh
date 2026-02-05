@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    Chức năng
+Đầu vào (Input)
+Đầu ra (Output)
+Mô tả yêu cầu nghiệp vụ & Kỹ thuật
+Đăng nhập (Bảo mật)
+Tên đăng nhập và Mật khẩu.
+Thông báo đăng nhập thành công hoặc khóa tài khoản.
+Yêu cầu tài khoản admin / 12345. Cho phép sai tối đa 3 lần. Nếu vượt quá, thông báo "Tài khoản đã bị khóa" và chấm dứt chương trình ngay lập tức.
+Nhập thêm lô sách
+Một chuỗi ký tự chứa tên các cuốn sách, phân cách bởi dấu phẩy (Ví dụ: "Sử,Địa,Lý").
+Số lượng sách thực tế đã được thêm vào kho (alert/console).
+Sử dụng phương thức split() để tách chuỗi thành mảng. Sử dụng vòng lặp (gợi ý: for...of) để đưa từng cuốn vào kho libraries. Cần xử lý loại bỏ khoảng trắng thừa (nếu có).
+Hiển thị danh sách
+Mảng dữ liệu sách hiện có.
+Danh sách sách in ra Console theo định dạng: 1. Toán, 2. Văn...
+Sử dụng vòng lặp for truyền thống để tận dụng biến đếm i cho việc đánh số thứ tự (index + 1).
+Tìm kiếm sách
+Tên cuốn sách cần tìm (String).
+Thông báo: "Tìm thấy tại vị trí [index]" hoặc "Không tìm thấy".
+Sử dụng phương thức indexOf() để lấy vị trí hoặc includes() để kiểm tra tồn tại. Nên xử lý không phân biệt hoa thường (case-insensitive) để tăng trải nghiệm.
+Cập nhật tên sách
+Tên sách cũ cần sửa và Tên sách mới.
+Thông báo trạng thái cập nhật (Thành công/Thất bại).
+Tìm vị trí sách cũ trong mảng. Nếu tồn tại, thực hiện gán giá trị mới vào vị trí đó (Mutation). Nếu không, báo lỗi sách không tồn tại.
+Đảo ngược kệ sách
+Mảng dữ liệu sách hiện có.
+Danh sách sách đã đảo ngược in ra Console kèm chỉ số index.
+Sử dụng phương thức reverse() để đảo ngược trực tiếp mảng gốc. Sau đó in danh sách, gợi ý sử dụng vòng lặp for...in hoặc for...of để hiển thị.
+Nhập kho nguồn khác
+Một mảng sách từ chi nhánh khác (Hardcode hoặc nhập mới).
+Thông báo "Đã gộp kho sách thành công".
+Sử dụng phương thức concat() để gộp mảng sách mới vào mảng libraries hiện tại. Lưu ý: concat trả về mảng mới, cần gán lại cho biến gốc.
+Thoát
+Lệnh chọn từ người dùng.
+Thông báo "Hẹn gặp lại!".
+Kết thúc vòng lặp menu chính (break hoặc thay đổi điều kiện vòng lặp).
+
+Chức năng 1: Nhập thêm lô sách mới
+Mô tả: Thủ thư nhận được một kiện hàng gồm nhiều cuốn sách. Để tiết kiệm thời gian, họ muốn nhập tất cả tên sách vào một lần duy nhất, các tên sách được phân cách nhau bởi dấu phẩy.
+Yêu cầu: Hệ thống phải tự tách chuỗi dữ liệu này và đưa từng cuốn sách vào kho lưu trữ hiện tại.
+Output: Thông báo số lượng sách thực tế đã được thêm vào kho.
+Chức năng 2: Hiển thị danh sách sách
+Mô tả: In ra toàn bộ danh sách sách hiện có để thủ thư kiểm kê.
+Yêu cầu: Kết quả in ra trong Console phải có số thứ tự bắt đầu từ 1 (Ví dụ: 1. Toán, 2. Văn...).
+Output: Danh sách sách được trình bày rõ ràng từng dòng.
+Chức năng 3: Tìm kiếm sách
+Mô tả: Kiểm tra một cuốn sách cụ thể có trong kho hay không.
+Yêu cầu: Người dùng nhập tên sách. Hệ thống kiểm tra và trả về thông báo: sách có tồn tại không? Nếu có thì nó đang nằm ở vị trí (chỉ số) nào trong kho?
+Output: "Sách [Tên] được tìm thấy tại vị trí [index]" hoặc "Không tìm thấy".
+Chức năng 4: Cập nhật tên sách
+Mô tả: Chỉnh sửa lại tên một cuốn sách đã có trong kho (ví dụ sửa lỗi chính tả).
+Yêu cầu: Người dùng nhập vào tên sách cần sửa và tên mới của nó. Hệ thống phải tìm ra đúng vị trí của sách đó trong kho để ghi đè tên mới lên.
+Output: Thông báo thành công nếu tìm thấy sách để sửa, ngược lại báo lỗi không tồn tại.
+Chức năng 5: Đảo ngược thứ tự kệ sách
+Mô tả: Đảo vị trí các cuốn sách từ cuối kệ lên đầu kệ và ngược lại để làm mới không gian trưng bày.
+Yêu cầu: Sau khi đảo thứ tự, in lại toàn bộ danh sách mới ra console, kèm theo chỉ số (index) hiện tại của chúng.
+Output: Danh sách sách đã được đảo ngược vị trí kèm chỉ số tương ứng.
+Chức năng 6: Nhập kho từ nguồn khác
+Mô tả: Thư viện nhập thêm một danh sách sách từ một chi nhánh khác (Giả sử chi nhánh này có sẵn các cuốn: "Sách Kỹ Năng", "Truyện Tranh").
+Yêu cầu: Kết hợp danh sách sách từ chi nhánh này vào kho sách hiện tại của hệ thống.
+Output: Thông báo "Đã gộp kho sách thành công".
+Chức năng 7: Thoát chương trình
+Output: In thông báo "Hẹn gặp lại!" và kết thúc vòng lặp menu.
+
+ -->
+    <script>
+        let loginAttempts = 0;
+        let isAuthenticated = false;
+
+        while (loginAttempts < 3) {
+            let username = prompt("Nhập tài khoản");
+            let password = prompt("Nhập mật khẩu");
+
+            if (username === "admin" && password === "12345") {
+                alert("Đăng nhập thành công!");
+                isAuthenticated = true;
+                break;
+            } else {
+                loginAttempts++;
+
+                if (username !== "admin" && password !== "12345") {
+                    alert(`Sai tài khoản và mật khẩu - còn ${3 - loginAttempts} lần`);
+                } else if (username !== "admin") {
+                    alert(`Sai tài khoản - còn ${3 - loginAttempts} lần`);
+                } else {
+                    alert(`Sai mật khẩu - còn ${3 - loginAttempts} lần`);
+                }
+            }
+        }
+
+        if (!isAuthenticated) {
+            alert("Tài khoản đã bị khóa!");
+        } else {
+
+            do {
+                let choose = +prompt(`
+                    === QUẢN LÝ THƯ VIỆN ===
+            1. Nhập thêm lô sách mới
+            2. Hiển thị danh sách sách
+            3. Tìm kiếm sách
+            4. Cập nhật tên sách
+            5. Đảo ngược thứ tự kệ sách
+            6. Nhập kho từ nguồn khác
+            7. Thoát chương trình
+            Mời bạn chọn chức năng (1-7): 
+            `);
+
+                switch (choose) {
+                    case 1:{
+                        let input = prompt("Nhạp tên các cuốn sách mới (phân cách bởi dấu phẩy):");
+                        let newInput = input.split(",");
+                        let count = 0;
+                        for (let value of newInput) {
+                            libraries.push(value.trim());
+                            
+                            count++;
+                        }
+                        alert(`Đã thêm ${count} cuốn sách vào kho.`);
+                        break;
+                    }
+
+                    case 2:{
+                        alert("Danh sách sách hiện có (xem Console):");
+                        for (let i = 0; i < libraries.length; i++) {
+                            console.log(``);
+                        }
+                        break;
+                    }
+
+                    case 3:{
+                        let searchName = prompt("Nhập tên sách cần tìm:");
+                        let index = libraries.indexOf(searchName);
+                        if (index !== -1) {
+                            alert(`Sách "${searchName}" được tìm thấy tại vị trí ${index}.`);
+                        } else {
+                            alert("Không tìm thấy sách trong kho.");
+                        }
+                        break;
+                    }
+
+                    case 4:{
+                        let oldName = prompt("Nhập tên sách cần cập nhật:");
+                        let newName = prompt("Nhập tên sách mới:");
+                        let index = libraries.indexOf(oldName);
+                        if (index !== -1) {
+                            libraries[index] = newName;
+                            alert("Cập nhật tên sách thành công.");
+                        } else {
+                            alert("Sách không tồn tại trong kho.");
+                        }
+                        break;
+                    }
+
+                    case 5:{
+                        libraries.reverse();
+                        console.log("Danh sách sách sau khi đảo ngược:");
+                        libraries.forEach((book, index) => {
+                            console.log(`${index + 1}. ${book}`);
+                        });
+                        break;
+                    }
+
+                    case 6:{
+                        let otherBranchBooks = ["Sách Kỹ Năng", "Truyện Tranh"];
+                        libraries = libraries.concat(otherBranchBooks);
+                        alert("Đã gộp kho sách thành công.");
+                        break;
+                    }
+
+                    case 7:{
+                        alert("Hẹn gặp lại!");
+                        break;
+                    }
+
+                    default:{
+                        
+                    }
+
+
+                } while (choose != 7);
+
+    </script>
+</body>
+
+</html>
