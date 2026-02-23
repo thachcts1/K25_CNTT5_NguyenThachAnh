@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thachdz</title>
+</head>
+
+<body>
+
+    <script>
+
+        let playerList = [];
+
+        // hằng số vị trí
+        const POSITIONS = ["", "Thủ môn", "Hậu vệ", "Tiền vệ", "Tiền đạo"];
+
+        let n = parseInt(prompt("Có bao nhiêu cầu thủ cần nhập vào đội bóng?"));
+
+        for (let i = 0; i < n; i++) {
+
+            // mã kh trùng
+            let id;
+            while (true) {
+                id = prompt(`Nhập mã cầu thủ thứ ${i + 1}:`);
+
+                let isDuplicate = false;
+
+                for (let j = 0; j < playerList.length; j++) {
+                    if (playerList[j].split("-")[0] === id) {
+                        isDuplicate = true;
+                        break;
+                    }
+                }
+
+                if (isDuplicate) {
+                    alert("Mã này đã tồn tại! Vui lòng nhập lại.");
+                } else {
+                    break;
+                }
+            }
+
+            // nhập tên
+            let name;
+            while (true) {
+                name = prompt(`Nhập tên cầu thủ thứ ${i + 1}:`);
+                if (name.trim() !== "") break;
+                alert("Tên không được để trống!");
+            }
+
+            // ===== nhập vị trí =====
+            let posChoice = parseInt(
+                prompt("Vị trí (1: Thủ môn, 2: Hậu vệ, 3: Tiền vệ, 4: Tiền đạo):")
+            );
+
+            let posName = POSITIONS[posChoice];
+
+            let playerString = id + "-" + name + "-" + posName;
+            playerList.push(playerString);
+        }
+
+
+        function displayTeamPlayers() {
+            console.log("\n--- DANH SÁCH ĐỘI BÓNG ---");
+
+            for (let i = 0; i < playerList.length; i++) {
+                let info = playerList[i].split("-");
+                console.log(
+                    `${i + 1}. Mã: ${info[0]} | Tên: ${info[1]} | Vị trí: ${info[2]}`
+                );
+            }
+        }
+
+        function addNewPlayer(name, position) {
+
+            let nextIndex = playerList.length + 1;
+            let newId = "P" + nextIndex.toString().padStart(3, "0");
+
+            let playerString = newId + "-" + name + "-" + position;
+
+            playerList.push(playerString);
+
+            console.log(`=> Đã thêm cầu thủ mới: ${playerString}`);
+        }
+
+        displayTeamPlayers();
+
+    </script>
+
+</body>
+
+</html>

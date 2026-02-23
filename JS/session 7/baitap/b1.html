@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thachdz</title>
+</head>
+
+<body>
+    <script>
+
+        let libraries = [];
+
+        while (true) {
+
+            let choose = parseInt(prompt(`
+                    1. Nhập thêm lô sách mới
+                    2. Hiển thị danh sách sách
+                    3. Tìm kiếm sách
+                    4. Cập nhật tên sách
+                    5. Đảo ngược thứ tự kệ sách
+                    6. Nhập kho từ nguồn khác
+                    7. Thoát chương trình
+                    Mời bạn chọn chức năng (1-7):
+                        `));
+
+            switch (choose) {
+
+                case 1: {
+                    let input = prompt("Nhập tên sách (cách nhau bằng dấu phẩy):");
+                    let books = input.split(",");
+
+                    let count = 0;
+                    for (let book of books) {
+                        libraries.push(book.trim());
+                        count++;
+                    }
+
+                    alert(`Đã thêm ${count} cuốn sách.`);
+                    break;
+                }
+
+
+                case 2: {
+                    if (libraries.length === 0) {
+                        alert("Kho sách đang trống!");
+                        break;
+                    }
+
+                    alert("Danh sách sách hiển thị ở Console.");
+
+                    for (let i = 0; i < libraries.length; i++) {
+                        console.log(`${i + 1}. ${libraries[i]}`);
+                    }
+                    break;
+                }
+                case 3: {
+                    let searchName = prompt("Nhập tên sách cần tìm:");
+                    let index = libraries.indexOf(searchName);
+
+                    if (index !== -1) {
+                        alert(`Tìm thấy "${searchName}" tại vị trí ${index}`);
+                    } else {
+                        alert("Không tìm thấy sách.");
+                    }
+                    break;
+                }
+
+                case 4: {
+                    let oldName = prompt("Nhập tên sách cần sửa:");
+                    let newName = prompt("Nhập tên sách mới:");
+
+                    let index = libraries.indexOf(oldName);
+
+                    if (index !== -1) {
+                        libraries[index] = newName;
+                        alert("Cập nhật thành công!");
+                    } else {
+                        alert("Sách không tồn tại.");
+                    }
+                    break;
+                }
+                case 5: {
+                    libraries.reverse();
+
+                    console.log("Danh sách sau khi đảo:");
+                    libraries.forEach((book, index) => {
+                        console.log(`${index + 1}. ${book}`);
+                    });
+
+                    alert("Đã đảo ngược kệ sách (xem Console)");
+                    break;
+                }
+
+                case 6: {
+                    let other = prompt("Nhập sách từ nguồn khác:");
+                    let newBooks = other.split(",");
+
+                    for (let book of newBooks) {
+                        libraries.push(book.trim());
+                    }
+
+                    alert("Nhập kho thành công!");
+                    break;
+                }
+
+                case 7: {
+                    alert("Hẹn gặp lại!");
+                    break;
+                }
+
+                default:
+                    alert("Lựa chọn không hợp lệ!");
+            }
+
+            if (choose === 7) {
+                break;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

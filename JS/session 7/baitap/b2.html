@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thachdz</title>
+</head>
+
+<body>
+
+    <script>
+
+        let playerIds = ["P001", "P002", "P003", "P004", "P005"];
+
+        let playerNames = [
+            "Nguyễn Văn A",
+            "Trần Thị B",
+            "Lê Văn C",
+            "Phạm Văn D",
+            "Hoàng Thị E"
+        ];
+
+        let playerJerseyNumbers = [10, 7, 8, 9, 11];
+
+        // Hiển thị danh sách đội bóng
+        function displayTeamList() {
+            console.log("\n--- DANH SÁCH ĐỘI BÓNG HIỆN TẠI ---");
+
+            for (let i = 0; i < playerIds.length; i++) {
+                console.log(
+                    `${i + 1}. Mã: ${playerIds[i]} | Tên: ${playerNames[i]} | Số áo: ${playerJerseyNumbers[i]}`
+                );
+            }
+
+            console.log("----------------------------------\n");
+        }
+
+        function updatePlayerInfo(playerId, newName, newJerseyNumber) {
+
+            let index = playerIds.indexOf(playerId);
+
+            if (index !== -1) {
+                playerNames[index] = newName;
+                playerJerseyNumbers[index] = newJerseyNumber;
+                return true;
+            }
+
+            return false;
+        }
+
+        displayTeamList();
+
+        let idToUpdate = prompt("Nhập mã cầu thủ muốn cập nhật (ví dụ: P001):");
+
+        let playerIndex = playerIds.indexOf(idToUpdate);
+
+        if (playerIndex !== -1) {
+
+            let name = prompt("Nhập tên mới cho cầu thủ:");
+            let jersey = parseInt(prompt("Nhập số áo mới (1-99):"));
+
+            let updateSuccess = updatePlayerInfo(idToUpdate, name, jersey);
+
+            if (updateSuccess) {
+                console.log(`=> Thông báo: Cập nhật cầu thủ ${idToUpdate} thành công!`);
+                displayTeamList();
+            }
+
+        } else {
+            console.log("=> Thông báo: Không tìm thấy cầu thủ với mã này!");
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Manager</title>
+</head>
+
+<body>
+
+    <script>
+
+        let players = [
+            "P001-Nguyễn Văn A-Thủ môn",
+            "P002-Trần Thị B-Hậu vệ",
+            "P003-Lê Văn C-Hậu vệ",
+            "P004-Phạm Văn D-Tiền vệ",
+            "P005-Hoàng Thị E-Tiền đạo",
+            "P006-Vũ Minh F-Tiền đạo",
+            "P007-Đặng Văn G-Thủ môn"
+        ];
+
+
+        function displayTeamList() {
+            console.log("--- DANH SÁCH ĐỘI BÓNG ---");
+
+            for (let i = 0; i < players.length; i++) {
+                let details = players[i].split("-");
+                console.log(`${i + 1}. ${details[0]} | ${details[1]} | ${details[2]}`);
+            }
+        }
+
+
+        function getPositionStatistics(playersList) {
+
+            let summary = {};
+
+            for (let i = 0; i < playersList.length; i++) {
+                let position = playersList[i].split("-")[2];
+
+                if (summary[position]) {
+                    summary[position]++;
+                } else {
+                    summary[position] = 1;
+                }
+            }
+
+            return summary;
+        }
+
+
+        function checkGoalkeeperExists() {
+
+            for (let i = 0; i < players.length; i++) {
+                if (players[i].split("-")[2] === "Thủ môn") {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+
+        displayTeamList();
+
+        console.log("\nThống kê vị trí:", getPositionStatistics(players));
+
+        console.log(
+            "\nĐội có ít nhất 1 thủ môn không?",
+            checkGoalkeeperExists()
+        );
+
+    </script>
+
+</body>
+
+</html>
