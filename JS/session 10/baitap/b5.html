@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const playersHistory = [
+            {
+                name: "Messi",
+                position: "Forward",
+                nationality: "Argentina",
+                seasons: {
+                    "2022-2023": { matches: 34, goals: 21, assists: 14, yellowCards: 3 },
+                    "2023-2024": { matches: 32, goals: 25, assists: 15, yellowCards: 2 },
+                    "2024-2025": { matches: 28, goals: 18, assists: 12, yellowCards: 1 }
+                }
+            },
+            {
+                name: "Ronaldo",
+                position: "Forward",
+                nationality: "Portugal",
+                seasons: {
+                    "2022-2023": { matches: 38, goals: 28, assists: 8, yellowCards: 5 },
+                    "2023-2024": { matches: 35, goals: 30, assists: 10, yellowCards: 4 },
+                    "2024-2025": { matches: 30, goals: 22, assists: 9, yellowCards: 3 }
+                }
+            }
+        ];
+
+        const getPlayerSeasonReport = (playerName, playersHistory) => {
+
+            const selectedPlayer =
+                playersHistory.find(p => p.name === playerName);
+
+            if (!selectedPlayer) {
+                return `Không tìm thấy cầu thủ ${playerName}`;
+            }
+
+            const seasonEntries =
+                Object.entries(selectedPlayer.seasons);
+
+            let totalMatches = 0;
+            let totalGoals = 0;
+            let totalAssists = 0;
+            let totalYellowCards = 0;
+
+            let bestScoringSeason = null;
+
+            seasonEntries.forEach(([seasonName, seasonStats]) => {
+
+                totalMatches += seasonStats.matches;
+                totalGoals += seasonStats.goals;
+                totalAssists += seasonStats.assists;
+                totalYellowCards += seasonStats.yellowCards;
+
+                if (
+                    !bestScoringSeason ||
+                    seasonStats.goals > bestScoringSeason.goals ||
+                    (seasonStats.goals === bestScoringSeason.goals &&
+                        seasonStats.assists > bestScoringSeason.assists)
+                ) {
+                    bestScoringSeason = {
+                        season: seasonName,
+                        goals: seasonStats.goals,
+                        assists: seasonStats.assists
+                    };
+                }
+            });
+
+            const averageGoalsPerMatch =
+                +(totalGoals / totalMatches).toFixed(2);
+
+            const averageAssistsPerMatch =
+                +(totalAssists / totalMatches).toFixed(2);
+
+            return {
+                name: selectedPlayer.name,
+                position: selectedPlayer.position,
+                nationality: selectedPlayer.nationality,
+                careerStats: {
+                    totalMatches,
+                    totalGoals,
+                    totalAssists,
+                    totalYellowCards,
+                    averageGoalsPerMatch,
+                    averageAssistsPerMatch,
+                    bestScoringSeason
+                }
+            };
+        };
+
+        console.log(getPlayerSeasonReport("Messi", playersHistory));
+    </script>
+</body>
+
+</html>
