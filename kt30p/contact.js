@@ -164,4 +164,4 @@ function sua(index) {
 }
 
 layDuLieuBanDau();
-hienThi();~
+hienThi();

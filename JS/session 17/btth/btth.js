@@ -89,6 +89,6 @@ function checkout(){
 
 document.getElementById("btn-checkout").onclick=checkout;
 
-loadCart();
-renderProducts();
-renderCart();
+loadCart;
+renderCart;
+renderProducts;
