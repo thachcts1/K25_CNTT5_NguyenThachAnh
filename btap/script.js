@@ -1,13 +1,13 @@
-let btn = document.getElementById("toggle");
+let btn = document.getElementById("btn");
 
 btn.onclick = function(){
 
-document.documentElement.classList.toggle("dark");
+document.body.classList.toggle("dark");
 
-if(document.documentElement.classList.contains("dark")){
+if(document.body.classList.contains("dark")){
 localStorage.setItem("theme","dark");
 }else{
 localStorage.setItem("theme","light");
 }
 
-};
+}
